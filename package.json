@@ -1,0 +1,16 @@
+{
+  "name": "objects-utils",
+  "version": "1.0.1",
+  "description": "utilities methods on objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "object",
+    "object",
+    "keys"
+  ],
+  "author": "Daniele Pellegrini <danieleforit@gmail.com>",
+  "license": "ISC"
+}
