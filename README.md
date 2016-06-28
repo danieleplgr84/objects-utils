@@ -4,7 +4,7 @@
 # Overview
 This is a collection of varius methods to manipulate objects in javascript. For now this module has only some methods to manipulates object's keys.
 
-# Usec
+# Use Keys
 ```js
 var objects = require('objects-utils');
 
@@ -28,3 +28,20 @@ objects.Keys.applyOnEmptyKeys(instance, function(instance, fieldName){
 });
 
 ```
+
+
+# Use Maps
+```js
+var objects = require('objects-utils');
+
+// create list at object key
+var map = {"a":1, "b": null, "c": 0, "d": {"ab": 45, "cd": null}};
+objects.Maps.createListAtKey(map, "k");
+
+
+// add item to list at key (create list if not exists)
+var map2 = {"a":1, "b": null, "c": 0}; 
+objects.Maps.atKeyAddItemToList(map2, 'k');  
+
+```
+

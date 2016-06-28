@@ -3,10 +3,8 @@ function padDigits(number, digits) {
     return Array(Math.max(digits - String(number).length + 1, 0)).join(0) + number;
 }
 
-
+/////////////////////////////////////// Keys 
 function ObjectKeys(){}
-
-
 ObjectKeys.applyOnEmptyKeys= function(instanceObj, func){
 	if( typeof(instanceObj)!=='undefined' && instanceObj!==null)  {
 		if((typeof(instanceObj)==='object')){ 
@@ -52,4 +50,25 @@ ObjectKeys.replaceEmptyKeys = function(instanceObj, TOKEN_REPLACE){
 };
 
 
+
+
+/////////////////////////////////////// Maps 
+function ObjectMaps(){}
+ObjectMaps.createListAtKey = function(_map, _key){
+	if(typeof(_map[_key])==='undefined' || 
+			!(_map[_key] instanceof Array)){
+		_map[_key] = [];
+	}
+	return _map[_key];
+};
+
+ObjectMaps.atKeyAddItemToList = function(_map, _key, _itemToPush){
+	ObjectMaps.createListAtKey(_map, _key);
+	_map[_key].push(_itemToPush);
+};
+
+
+
+
 exports.Keys = ObjectKeys;
+exports.Maps = ObjectMaps;
